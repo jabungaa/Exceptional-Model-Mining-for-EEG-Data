@@ -1,6 +1,6 @@
 import pandas as pd
 from time import time
-from beam_search import EMM, as_string
+from beam_search import EMM_regression, as_string
 
 start = time()
 
@@ -31,15 +31,15 @@ for target in targets_to_analyze:
     print(f"{"=" * 25}")
 
     # Set EMM parameters and run (away from all the problems... (ha...))
-    results = EMM(
+    results = EMM_regression(
         w=50,
         d=6,
         q=50,
         catch_all_description=[],
         df=df,
-        features=descriptive_features,
-        eeg_features=eeg_features,
-        target=target_col,
+        descriptive_features=descriptive_features,
+        target_features=eeg_features,
+        binary_target=target_col,
         n_chunks=20
     )
 
