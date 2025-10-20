@@ -13,6 +13,12 @@ import heapq
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import mahalanobis
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.exceptions import ConvergenceWarning
+import warnings
+
+warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 
 # Classes
@@ -164,14 +170,14 @@ def eta(seed, df, features, n_chunks=5):
 #     return wracc
 
 
-def satisfies_all(desc, df, threshold=0.2):
+def satisfies_all(desc, df, threshold=0.05):
     """Checks if a subgroup is of a good size - not too small, not too big."""
     d_str = as_string(desc)
     ind = df.eval(d_str)
     return len(df) * threshold <= sum(ind) <= len(df) * (1 - threshold)
 
 
-def eval_quality(desc, df, eeg_features, binary_target):
+def mahalanobis_quality(desc, df, eeg_features, binary_target):
     """Calculates a composite quality score for a subgroup.
     The score combines:
     1. WRAcc: To measure how exceptional the proportion of unhealthy patients is.
@@ -179,24 +185,30 @@ def eval_quality(desc, df, eeg_features, binary_target):
        deviate from the complement average, accounting for covariance.
     A high score requires a subgroup to be exceptional in both aspects.
     """
-    # 1. Get subgroup and complement
+    # Get subgroup and complement
     sub_group = df[df.eval(as_string(desc))]
     sub_complement = df[~df.eval(as_string(desc))]
 
-    if len(sub_group) == 0:
+    # Handle edge cases
+    if len(sub_group) == 0 or len(sub_complement) == 0:
         return 0.0
 
-    # 2. Calculate WRAcc for the binary target (is_unhealthy)
+    # Calculate entropy (phi_ef)
+    p_n = len(sub_group) / len(df)
+    p_n_c = len(sub_complement) / len(df)
+    entropy = -p_n * np.log2(p_n) - p_n_c * np.log2(p_n_c)
+    # Handle floating point issues if p_n is near 0 or 1
+    if np.isnan(entropy):
+        entropy = 0.0
+
+    # Calculate WRAcc for the binary target (is_unhealthy)
     prop_p_sg = sub_group[binary_target].mean()
     prop_p_df = df[binary_target].mean()
     wracc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
-
-    # We are only interested in subgroups with a higher-than-average rate of unhealthy patients.
     if wracc <= 0:
         return 0.0
 
-    # 3. Calculate the Mahalanobis distance for the EEG features model
-    # The model here is the mean vector of the EEG features.
+    # Calculate the Mahalanobis distance for the EEG features model
     sub_mean_eeg = sub_group[eeg_features].mean().values
     sub_complement_mean_eeg = sub_complement[eeg_features].mean().values
     cov_matrix = sub_complement[eeg_features].cov().values
@@ -209,11 +221,79 @@ def eval_quality(desc, df, eeg_features, binary_target):
     with open("tmp.csv", "a") as f:
         f.write(f"{wracc}, {mahalanobis_dist}\n")
 
-    # 4. Return the composite quality score
-    return wracc * mahalanobis_dist
+    # Return the composite quality score
+    return entropy * wracc * mahalanobis_dist
 
 
-def EMM(w, d, q, catch_all_description, df, features, eeg_features, target, n_chunks=5, ensure_diversity=False):
+def regression_quality(desc, df, eeg_features, binary_target):
+    """Calculates a quality score based on entropy and logistic regression slope difference.
+    It combines:
+    1. Entropy (phi_ef): Measures the informativeness of the
+       split created by the subgroup and its complement.
+    2. Model Difference: The absolute difference in the slope coefficient
+       of a simple logistic regression model fitted on the subgroup and the complement.
+    A high score requires a subgroup to be exceptional in both aspects.
+    """
+    # Get subgroup and complement
+    sub_group = df[df.eval(as_string(desc))]
+    sub_complement = df[~df.eval(as_string(desc))]
+
+    # Handle edge cases
+    if len(sub_group) == 0 or len(sub_complement) == 0:
+        return 0.0
+
+    # Define X (inputs) and Y (output)
+    X_g = sub_group[eeg_features]
+    y_g = sub_group[binary_target]
+    X_c = sub_complement[eeg_features]
+    y_c = sub_complement[binary_target]
+
+    # We cannot fit a logistic regression if either group has only one class
+    if len(np.unique(y_g)) < 2 or len(np.unique(y_c)) < 2:
+        return 0.0
+
+    # Calculate entropy (phi_ef)
+    p_n = len(sub_group) / len(df)
+    p_n_c = len(sub_complement) / len(df)
+    entropy = -p_n * np.log2(p_n) - p_n_c * np.log2(p_n_c)
+    # Handle floating point issues if p_n is near 0 or 1
+    if np.isnan(entropy):
+        entropy = 0.0
+
+    # Calculate WRAcc
+    prop_p_sg = sub_group[binary_target].mean()
+    prop_p_df = df[binary_target].mean()
+    wracc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
+    if wracc <= 0:
+        return 0.0
+
+    # Calculate regression coefficients
+    try:
+        # Fit the scaler on the entire dataset to ensure G and C are scaled consistently.
+        scaler = StandardScaler().fit(df[eeg_features])
+        X_g_scaled = scaler.transform(X_g)
+        X_c_scaled = scaler.transform(X_c)
+
+        # Fit logistic regression on subgroup
+        model_g = LogisticRegression(solver="liblinear", class_weight="balanced").fit(X_g_scaled, y_g)
+        beta_g = model_g.coef_[0]
+
+        # Fit logistic regression on complement
+        model_c = LogisticRegression(solver="liblinear", class_weight="balanced").fit(X_c_scaled, y_c)
+        beta_c = model_c.coef_[0]
+
+    except Exception:
+        return 0.0
+
+    # Calculate Model Difference
+    model_diff = np.linalg.norm(beta_g - beta_c)
+
+    # Return the composite quality score
+    return entropy * wracc * model_diff
+
+
+def EMM(w, d, q, catch_all_description, df, features, eeg_features,
+        target, n_chunks=5, ensure_diversity=False, quality_name="regression"):
     """EMM main loop.
     w - width of beam, i.e. the max number of results in the beam
     d - num levels, i.e. how many attributes are considered
@@ -226,13 +306,22 @@ def EMM(w, d, q, catch_all_description, df, features, eeg_features, target, n_ch
     features - descriptive features for subgroup discovery
     eeg_features - numeric features on which the model is built
     target - column name of target attribute in df
+    quality_name - quality function name
     """
-
     # Initialize variables
     result_set = BoundedPriorityQueue(q)  # Set of results, can contain results from multiple levels
     candidate_queue = Queue()  # Set of candidate solutions to consider adding to the result_set
     candidate_queue.enqueue(catch_all_description)  # Set of results on a particular level
     error = 0.00001  # Allowed error margin (due to floating point error) when comparing the quality of solutions
+
+    quality_f = None
+    match quality_name:
+        case "regression":
+            quality_f = regression_quality
+        case "mahalanobis":
+            quality_f = mahalanobis_quality
+        case _:
+            raise ValueError(f"Unknown quality_name: {quality_name}.")
 
     # Perform BeamSearch for <d> levels
     for level in range(d):
@@ -247,7 +336,7 @@ def EMM(w, d, q, catch_all_description, df, features, eeg_features, target, n_ch
 
             # Start by evaluating the quality of the seed
             if seed:
-                seed_quality = eval_quality(seed, df, eeg_features, target)
+                seed_quality = quality_f(seed, df, eeg_features, target)
             else:
                 seed_quality = 99
 
@@ -260,7 +349,7 @@ def EMM(w, d, q, catch_all_description, df, features, eeg_features, target, n_ch
                 if satisfies_all(desc, df):
 
                     # Calculate the new solution's quality
-                    quality = eval_quality(desc, df, eeg_features, target)
+                    quality = quality_f(desc, df, eeg_features, target)
 
                     # Ensure diversity by forcing difference in quality when compared to its seed
                     # if <ensure_diversity> is set to True. Principle is based on:
