@@ -32,8 +32,15 @@ class BoundedPriorityQueue:
         self.values = []
         self.bound = bound
         self.entry_count = 0
+        self.seen_normalized = set()
 
     def add(self, element, quality, **adds):
+        normalized = tuple(sorted(element))
+        if normalized in self.seen_normalized:
+            return
+
+        self.seen_normalized.add(normalized)
+
         # Adds <element> to the bounded priority queue if it is of sufficient quality
         new_entry = (quality, self.entry_count, element, adds)
         if len(self.values) >= self.bound:
@@ -60,12 +67,15 @@ class Queue:
 
     def __init__(self):  # Initializes empty queue
         self.items = []
+        self.seen_normalized = set()
 
     def is_empty(self):  # Returns True if queue is empty, False otherwise
         return self.items == []
 
     def enqueue(self, item):  # Adds <item> to queue if it is not already present
-        if item not in self.items:
+        normalized = tuple(sorted(item))
+        if normalized not in self.seen_normalized:
+            self.seen_normalized.add(normalized)
             self.items.insert(0, item)
 
     def dequeue(self):  # Pulls one item from the queue
@@ -217,9 +227,6 @@ def mahalanobis_quality(desc, df, eeg_features, binary_target):
 
     # The distance measures how many standard deviations away the subgroup mean is from the global mean.
     mahalanobis_dist = mahalanobis(sub_mean_eeg, sub_complement_mean_eeg, inv_cov_matrix_eeg)
-
-    with open("tmp.csv", "a") as f:
-        f.write(f"{wracc}, {mahalanobis_dist}\n")
 
     # Return the composite quality score
     return entropy * wracc * mahalanobis_dist

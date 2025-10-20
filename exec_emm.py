@@ -41,7 +41,7 @@ for target in targets_to_analyze:
         eeg_features=eeg_features,
         target=target_col,
         n_chunks=20,
-        quality_name="mahalanobis"
+        quality_name="regression"
     )
 
     # Print results for the current run
