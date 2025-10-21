@@ -190,8 +190,10 @@ def satisfies_all(desc, df, threshold=0.05):
 def mahalanobis_quality(desc, df, eeg_features, binary_target):
     """Calculates a composite quality score for a subgroup.
     The score combines:
-    1. WRAcc: To measure how exceptional the proportion of unhealthy patients is.
-    2. Mahalanobis Distance: To measure how much the subgroup's average EEG features
+    1. RAcc: To measure how exceptional the proportion of unhealthy patients is.
+    2. Entropy (phi_ef): Measures the informativeness of the
+       split created by the subgroup and its complement.
+    3. Mahalanobis Distance: To measure how much the subgroup's average EEG features
        deviate from the complement average, accounting for covariance.
     A high score requires a subgroup to be exceptional in both aspects.
     """
@@ -211,11 +213,11 @@ def mahalanobis_quality(desc, df, eeg_features, binary_target):
     if np.isnan(entropy):
         entropy = 0.0
 
-    # Calculate WRAcc for the binary target (is_unhealthy)
+    # Calculate RAcc for the binary target (is_unhealthy)
     prop_p_sg = sub_group[binary_target].mean()
     prop_p_df = df[binary_target].mean()
-    wracc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
-    if wracc <= 0:
+    racc = (prop_p_sg - prop_p_df)
+    if racc <= 0:
         return 0.0
 
     # Calculate the Mahalanobis distance for the EEG features model
@@ -229,15 +231,16 @@ def mahalanobis_quality(desc, df, eeg_features, binary_target):
     mahalanobis_dist = mahalanobis(sub_mean_eeg, sub_complement_mean_eeg, inv_cov_matrix_eeg)
 
     # Return the composite quality score
-    return entropy * wracc * mahalanobis_dist
+    return entropy * racc * mahalanobis_dist
 
 
 def regression_quality(desc, df, eeg_features, binary_target):
     """Calculates a quality score based on entropy and logistic regression slope difference.
     It combines:
-    1. Entropy (phi_ef): Measures the informativeness of the
+    1. RAcc: To measure how exceptional the proportion of unhealthy patients is.
+    2. Entropy (phi_ef): Measures the informativeness of the
        split created by the subgroup and its complement.
-    2. Model Difference: The absolute difference in the slope coefficient
+    3. Model Difference: The absolute difference in the slope coefficient
        of a simple logistic regression model fitted on the subgroup and the complement.
     A high score requires a subgroup to be exceptional in both aspects.
     """
@@ -270,8 +273,8 @@ def regression_quality(desc, df, eeg_features, binary_target):
     # Calculate WRAcc
     prop_p_sg = sub_group[binary_target].mean()
     prop_p_df = df[binary_target].mean()
-    wracc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
-    if wracc <= 0:
+    racc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
+    if racc <= 0:
         return 0.0
 
     # Calculate regression coefficients
@@ -296,7 +299,7 @@ def regression_quality(desc, df, eeg_features, binary_target):
     model_diff = np.linalg.norm(beta_g - beta_c)
 
     # Return the composite quality score
-    return entropy * wracc * model_diff
+    return entropy * racc * model_diff
 
 
 def EMM(w, d, q, catch_all_description, df, features, eeg_features,
