@@ -32,7 +32,7 @@ for target in targets_to_analyze:
 
     # Set EMM parameters and run (away from all the problems... (ha...))
     results = EMM(
-        w=500,
+        w=100,
         d=6,
         q=100,
         catch_all_description=[],
@@ -40,8 +40,8 @@ for target in targets_to_analyze:
         features=descriptive_features,
         eeg_features=eeg_features,
         target=target_col,
-        n_chunks=50,
-        quality_name="mahalanobis"
+        n_chunks=20,
+        quality_name="regression"
     )
 
     # Print results for the current run

@@ -216,7 +216,7 @@ def mahalanobis_quality(desc, df, eeg_features, binary_target):
     # Calculate RAcc for the binary target (is_unhealthy)
     prop_p_sg = sub_group[binary_target].mean()
     prop_p_df = df[binary_target].mean()
-    racc = (prop_p_sg - prop_p_df)
+    racc = prop_p_sg - prop_p_df
     if racc <= 0:
         return 0.0
 
@@ -273,7 +273,7 @@ def regression_quality(desc, df, eeg_features, binary_target):
     # Calculate WRAcc
     prop_p_sg = sub_group[binary_target].mean()
     prop_p_df = df[binary_target].mean()
-    racc = (len(sub_group) / len(df)) * (prop_p_sg - prop_p_df)
+    racc = prop_p_sg - prop_p_df
     if racc <= 0:
         return 0.0
 

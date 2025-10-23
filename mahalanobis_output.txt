@@ -1,27 +1,17 @@
+Beam Search Params
+w=100
+d=6
+q=100
+n_chunks=20
+quality_name="mahalanobis"
+==================
+
 --- Top Exceptional Subgroups for Group A ---
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age <= 79.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and MMSE <= 20.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age <= 79.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.76 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.83673469387755 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.916666666666664 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.8 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.857142857142854 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.916666666666664 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.97872340425532 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.04347826086956 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.111111111111114 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.18181818181818 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.25581395348837 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.333333333333336 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.41463414634146 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.5 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.58974358974359 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.68421052631579 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.78378378378378 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.888888888888886 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.85714285714286 and Age <= 77.0 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 20.0 and MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
@@ -31,24 +21,6 @@ Quality: 1.1758 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0' 
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age <= 79.0 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 22.0 and MMSE <= 20.0 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age <= 79.0 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.76 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.83673469387755 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 22.0 and Age > 52.916666666666664 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.8 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.857142857142854 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.916666666666664 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 51.97872340425532 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.04347826086956 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.111111111111114 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.18181818181818 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.25581395348837 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.333333333333336 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.41463414634146 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.5 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.58974358974359 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.68421052631579 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.78378378378378 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1758 | Description: 'MMSE <= 20.0 and Age > 52.888888888888886 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.0 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.85714285714286 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.85714285714286 and Age <= 77.0' | Patients: 13 | Group A Rate: 100.0%
@@ -57,50 +29,84 @@ Quality: 1.1758 | Description: 'MMSE <= 22.0 and MMSE <= 16.0' | Patients: 13 | 
 Quality: 1.1758 | Description: 'MMSE <= 20.0 and MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.0' | Patients: 13 | Group A Rate: 100.0%
 Quality: 1.1758 | Description: 'MMSE <= 16.85714285714286' | Patients: 13 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.48 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.489795918367347 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.5 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.51063829787234 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.521739130434782 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.533333333333333 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
-Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 4.545454545454545 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
-
-
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.6 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.714285714285714 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 22.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.846153846153847 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.2631578947368425 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.333333333333333 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.411764705882353 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 9.0' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 9.5' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 10.11111111111111' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 10.875' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 11.857142857142858' | Patients: 10 | Group A Rate: 100.0%
+Quality: 1.1443 | Description: 'MMSE <= 20.0 and MMSE <= 18.0 and MMSE <= 16.0 and Age <= 77.0 and MMSE > 5.5 and MMSE > 13.166666666666668' | Patients: 10 | Group A Rate: 100.0%
 
 --- Top Exceptional Subgroups for Group F ---
 Quality: 4.6317 | Description: 'MMSE > 14.0 and Age <= 79.0 and MMSE <= 30.0 and MMSE > 16.0' | Patients: 75 | Group F Rate: 30.7%
@@ -183,27 +189,25 @@ Quality: 3.9161 | Description: 'MMSE > 15.818181818181818 and Age <= 79.0' | Pat
 Quality: 3.9161 | Description: 'MMSE > 14.0' | Patients: 80 | Group F Rate: 28.7%
 Quality: 3.9161 | Description: 'MMSE > 14.500000000000002' | Patients: 80 | Group F Rate: 28.7%
 Quality: 3.9161 | Description: 'MMSE > 15.818181818181818' | Patients: 80 | Group F Rate: 28.7%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 44.9 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 44.91836734693877 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 44.9375 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 44.95744680851064 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 44.97826086956522 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.0 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.02272727272727 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.04651162790697 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.07142857142857 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.09756097560975 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.125 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.15384615384615 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.18421052631579 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.21621621621622 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.25 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.285714285714285 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.3235294117647 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.36363636363637 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.40625 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
-Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 45.45161290322581 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.25 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.36842105263158 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.5 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.64705882352941 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.8125 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.0 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.214285714285715 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.46153846153846 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.75 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 48.09090909090909 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 48.5 and Age <= 71.0 and MMSE <= 26.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.25 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.36842105263158 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.5 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.64705882352941 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 46.8125 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.0 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.214285714285715 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.46153846153846 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
+Quality: 3.8843 | Description: 'MMSE > 22.0 and MMSE <= 26.75 and Age > 47.75 and Age <= 71.0' | Patients: 5 | Group F Rate: 100.0%
 
-
-
-TIME 13688.658886671066s
+TIME 1409.7360770702362s
